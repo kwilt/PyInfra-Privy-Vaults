@@ -6,7 +6,7 @@ from pathlib import Path
 password = getpass('Enter decryption password: ')
 
 def get_secret(encrypted_secret):
-    secret_filepath = Path(f"vault/{encrypted_secret}")
+    secret_filepath = Path(f"vaults/{encrypted_secret}")
     with open(secret_filepath, "rb") as secret:
         decrypted_secret = privy.peek(secret.read().decode("utf-8"), password)
         if isinstance(decrypted_secret, bytes):
