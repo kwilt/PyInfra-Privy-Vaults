@@ -13,11 +13,11 @@ def get_secret(encrypted_secret):
             return decrypted_secret.decode("utf-8")
         return decrypted_secret
 
-your_encrypted_value = get_secret("encrypted_value_filename")
+super_secret_password = get_secret("super_secret_password")
 
 files.template(
   name="Create file from template",
   src="templates/template_example.j2",
   dest="/path/to/destination",
-  your_encrypted_value=your_encrypted_value,
+  super_secret_password=super_secret_password, #pass the decrypted variable into the jinja template
 )
