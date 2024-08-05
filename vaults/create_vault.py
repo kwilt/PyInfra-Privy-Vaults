@@ -3,7 +3,7 @@ from getpass import getpass
 from pathlib import Path
 
 filename = input("Enter name of new password file: ")
-password = getpass('Enter the decryption password: ')
+password = getpass("Enter the decryption password: ")
 data_input = getpass("Enter the password to be hidden: ")
 
 data = bytes(data_input, encoding="utf-8")
